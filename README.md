@@ -17,6 +17,7 @@ Este é um desafio que propõe criar uma nova tela usando a mesma estrutura do q
   docker-compose up
 ```
 
+#
 
 **Instalação local do Desafio 5:**
 
