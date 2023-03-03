@@ -38,7 +38,7 @@ Crie um .env na raiz do diretório do projeto e adicione essas variáveis:
   python app.py
 ```
 
-
+*Atualize a página para ver as mudanças*
 
     
 ## Authors
