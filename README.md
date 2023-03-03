@@ -22,7 +22,7 @@ Este é um desafio que propõe criar uma nova tela usando a mesma estrutura do q
 **Instalação local do Desafio 4:**
 
 ```bash
-  cd elasticEstab
+  cd elasticestab
   pip install -r requirements.txt
   python main.py
 ```

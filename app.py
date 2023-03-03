@@ -30,7 +30,7 @@ if not es.indices.exists(index=index_name):
 @app.route('/')
 def index():
     result = es.search(index=index_name, body={'query': {'match_all': {}}})
-    estabelecimentos = [hit['_source'] for hit in result['hits']['hits']]
+    estabelecimentos = [hit['_source'].update({'_id': hit['_id']}) or hit['_source'] for hit in result['hits']['hits']]
     return render_template('index.html', estabelecimentos=estabelecimentos)
 
 @app.route('/add', methods=['GET', 'POST'])
