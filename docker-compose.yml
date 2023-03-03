@@ -1,0 +1,14 @@
+version: '3'
+services:
+  desafio5:
+    build: .
+    environment:
+      ELASTICSEARCH_HOSTS: http://desafio1_elasticsearch_1:9200
+      SECRET_KEY: mysecretkey
+    ports:
+      - "5000:5000"
+    networks:
+      - desafio1_my-network
+networks:
+  desafio1_my-network:
+    external: true

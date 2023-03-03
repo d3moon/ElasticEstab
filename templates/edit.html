@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="modal-title">Editar Estabelecimento</h5>
+          </div>
+          <div class="card-body">
+              <form method="POST" action="{{ url_for('edit', id=estabelecimento['_id']) }}">
+              <div class="form-group">
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" class="form-control" id="cnpj" name="cnpj" value="{{ estabelecimento.cnpj }}" required>
+                <small class="form-text text-muted">Digite o CNPJ no formato 00.000.000/0000-00</small>
+              </div>
+              <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" value="{{ estabelecimento.nome }}" required>
+              </div>
+              <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="text" class="form-control" id="cep" name="cep" value="{{ estabelecimento.cep }}" required>
+                <small class="form-text text-muted">Digite o CEP no formato 00000000</small>
+              </div>
+              <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Digite um telefone válido" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" value="{{ estabelecimento.telefone }}" required>
+                <small class="form-text text-muted">Digite o telefone no formato (00) 00000000</small>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email" value="{{ estabelecimento.email }}" required>
+                <small class="form-text text-muted">Digite um endereço de e-mail válido no formato nome@dominio.com</small>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#successModal">Salvar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+{% endblock %}
