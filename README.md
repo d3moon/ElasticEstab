@@ -12,29 +12,31 @@ Este é um desafio que propõe criar uma nova tela usando a mesma estrutura do q
 *Por problemas de conexão de container não consegui conectar a tempo os registros do Elasticsearch do desafio1 via container com o desafio 5, porém funciona acessando de maneira local o desafio 4 e subindo a imagem do desafio 1 normalmente*
 
 ```bash
-  git clone https://github.com/d3moon/EstabProcess
-  cd estabprocess
+  cd EstabProcess
   docker-compose build
   docker-compose up
 ```
 
 
-**Instalação local do Desafio 4:**
-
-```bash
-  cd elasticestab
-  pip install -r requirements.txt
-  python main.py
-```
+**Instalação local do Desafio 5:**
 
 
 ## Variáveis de Ambiente
 
 Crie um .env na raiz do diretório do projeto e adicione essas variáveis:
 
-``SECRET_KEY=mysecretkey``
+```bash 
+  SECRET_KEY=mysecretkey
+  ELASTICSEARCH_HOST=http://localhost:9200/
+```
 
-``ELASTICSEARCH_HOST=http://localhost:9200/`` 
+
+```bash
+  cd ElasticEstab
+  pip install -r requirements.txt
+  python main.py
+```
+
 
 
     
