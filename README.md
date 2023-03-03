@@ -35,7 +35,7 @@ Crie um .env na raiz do diretório do projeto e adicione essas variáveis:
 ```bash
   cd ElasticEstab
   pip install -r requirements.txt
-  python main.py
+  python app.py
 ```
 
 
